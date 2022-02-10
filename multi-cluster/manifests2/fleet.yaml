@@ -7,7 +7,7 @@ targetCustomizations:
   yaml:
     overlays:
     # Refers to overlays/noreplication folder
-    - noreplication
+    - scale3
 
 - name: test
   clusterSelector:
