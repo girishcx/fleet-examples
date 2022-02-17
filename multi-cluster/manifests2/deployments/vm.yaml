@@ -19,11 +19,6 @@ spec:
             average: "100KB/s"
             peak: "150KB/s"
             burst: "150KB/s"
-      storage:
-      - capacity: "10GB"
-        mountPath: "/userData"
-      - capacity: "5GB"
-        mountPath: "/userData2"
       image:
         marketplace: "nve-marketplace"
         name: "Golden-CentOS-Stream8"
