@@ -1,13 +1,12 @@
 apiVersion: nve.netapp.io/v1
 kind: NVENetworkSecurityGroup
 metadata:
-  name: "secgroup-allow-all"
+  name: "secgroup-01"
 spec:
-  template:
-    spec:
+  rules:
     - direction: "Inbound"
-      protocol: "tcp"
-      ports: "80"
+      protocol: "all"
+      ports: "*"
     - direction: "Outbound"
-      protocol: "tcp"
-      ports: "80"
+      protocol: "all"
+      ports: "*"
