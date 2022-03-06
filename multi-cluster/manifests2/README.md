@@ -14,11 +14,11 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: manifests
-  namespace: fleet-default
+  namespace: allcusters
 spec:
   repo: https://github.com/rancher/fleet-examples
   paths:
-  - multi-cluster/manifests
+  - multi-cluster/manifests2
   targets:
   - name: dev
     clusterSelector:
