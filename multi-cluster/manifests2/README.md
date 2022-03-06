@@ -16,7 +16,7 @@ metadata:
   name: manifests
   namespace: allcusters
 spec:
-  repo: https://github.com/rancher/fleet-examples
+  repo: https://github.com/girishcx/fleet-examples
   paths:
   - multi-cluster/manifests2
   targets:
