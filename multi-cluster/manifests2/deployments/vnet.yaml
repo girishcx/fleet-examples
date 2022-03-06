@@ -1,11 +1,11 @@
 apiVersion: nve.netapp.io/v1
 kind: NVEVirtualNetwork
 metadata:
-  name: "vnet-01"
+  name: "vnet-04"
 spec:
   mode: "bridge"
   type: "private"
   size: 5
-  cidr: "192.168.0.0/16"
+  cidr: "192.168.2.0/24"
   securityGroups:
-    - name: "secgroup-01"
+    - name: "secgroup-04"
