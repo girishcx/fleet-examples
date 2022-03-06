@@ -1,14 +1,14 @@
 apiVersion: nve.netapp.io/v1
 kind: NVEVirtualMachine
 metadata:
-  name: "appvm2"
+  name: "testappvm-1"
 spec:
   template:
     spec:
       cpu: 4
-      memory: "4GB"
+      memory: "2GB"
       network:
-      - name: "vnet-01"
+      - name: "vnet-04"
         qos:
           inbound:
             average: "100KB/s"
