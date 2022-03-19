@@ -1,7 +1,7 @@
 apiVersion: nve.netapp.io/v1
 kind: NVENetworkSecurityGroup
 metadata:
-  name: "secgroup-04"
+  name: "secgroup-01"
 spec:
   rules:
     - direction: "Inbound"
