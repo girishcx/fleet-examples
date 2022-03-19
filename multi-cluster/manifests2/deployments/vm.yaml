@@ -24,7 +24,7 @@ spec:
         mountPath: "/data"
         replicationGoal: 2
       image:
-        marketplace: "nve-marketplace"
+        marketplace: "test-mp"
         name: "Golden-CentOS-Stream8"
       customization:       
         startScript: "echo Hello"
