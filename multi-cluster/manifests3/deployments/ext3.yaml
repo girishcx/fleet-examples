@@ -1,0 +1,15 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEExternalStorage
+metadata:
+  name: "backup-target-1"
+spec:
+  protocol: "s3"
+  s3target:
+    bucket: "cloud-target-bucket"
+    prefix: ""
+    region: "us-east-2"   
+    storageClass: "STANDARD"
+    provider: "s3"
+    encryption:
+      protocol: "aes256"
+      keyId: "key1"

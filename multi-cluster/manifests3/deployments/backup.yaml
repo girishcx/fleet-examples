@@ -1,0 +1,42 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEVirtualMachine
+metadata:
+  name: "appvmx"
+spec:
+  template:
+    spec:
+      cpu: 4
+      memory: "4GB" 
+      network:
+      - name: "vnet-01"
+        qos:
+          inbound:
+            average: "100KB/s"
+            peak: "150KB/s"
+            burst: "150KB/s"
+          outbound:
+            average: "100KB/s"
+            peak: "150KB/s"
+            burst: "150KB/s"
+      image:
+        marketplace: "test-mp"
+        name: "Golden-CentOS-Stream8"
+      outgoingData:
+      - operation: "copy"
+        dataBrokerId: "6261dc61f66fdf93cb154bea"
+        source:
+          type: "nfs"
+          path: "/data/camera01"
+        target:
+          externalStorage:
+            kind: "NVEExternalStorage"
+            name: "backup-target-1"
+        schedule:
+          frequency: "15min"    
+      customization:       
+        startScript: "echo $MYTEST > /root/test.yaml"
+        startScriptEncoded: false
+        sshKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDYryHcrQ42jJIPu5Vsy5NB8SpxOLIl4WC9gNbBFPnqxjwcuOChoAIa6ZEaiBrVQdAS37kuYtxRvL8rS21qEfGikf9wlZ7WTIMq0pr00cAi/MxV/Nf8lwu1Ud5blDMsltrc02D2xRj0tyeY8pkiJ8FIHYxM+X+DiU4HqRAaZg4r7Ufl7r8vKkN71DDJc0sdpmUD6wx/auhdrL7BoDidxBCd26Vmzouy+CAIco9uKgTEgwfToqKk3QiOaFOh2l1vCVVskYdNEX5guDBuPsnAJUMYVMLK5w7rEfTv4UWyKRwXp7o6FvjGXVjQUt4Z+fwn9SnjNXj79/mrPErbyCDY5Ed4kOUOmltkT6WObwRCPCVeHLGs7J+J5jmGgxf1ZGSONS8o19QTIopXV//w8DTrG1MRPsWuOJ4y2JRO8niyD/Txoy8yTH+1gVwpD9x95rS8WUJGN/jYJ9pv6QeSh6fD3Ig+LR1pxpnsnXT/AA+n/LOJaceHkQiUdbbwFHX9USxFI8= c5metal"
+        userInput:
+        - key: "mytest"
+          value: "helloworld"        
