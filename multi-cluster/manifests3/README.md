@@ -14,7 +14,7 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: manifests
-  namespace: allcusters
+  namespace: allclusters
 spec:
   repo: https://github.com/girishcx/fleet-examples
   paths:
