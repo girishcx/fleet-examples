@@ -5,8 +5,8 @@ metadata:
   namespace: allclusters
 spec:
   targets:
-    - clusterGroup: dev
-      name: dev
+    - clusterGroup: rtp-dev
+      name: rtp-dev
   branch: master
   repo: https://github.com/girishcx/fleet-examples
   paths:
