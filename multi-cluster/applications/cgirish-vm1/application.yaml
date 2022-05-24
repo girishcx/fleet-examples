@@ -16,7 +16,7 @@ spec:
         name: Golden-CentOS8-Stream
       memory: 2GB
       network:
-        - name: vnet-04
+        - name: vnet-02
           qos:
             inbound:
               average: 100KB/s
