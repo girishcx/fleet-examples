@@ -1,0 +1,13 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: cgirish-vm1
+  namespace: allclusters
+spec:
+  targets:
+    - clusterGroup: dev
+      name: dev
+  branch: master
+  repo: https://github.com/girishcx/fleet-examples
+  paths:
+    - multi-cluster/applications/cgirish-vm1
