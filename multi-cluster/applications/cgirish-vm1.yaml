@@ -4,10 +4,10 @@ metadata:
   name: cgirish-vm1
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/applications/cgirish-vm1
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: rtp-dev
       name: rtp-dev
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/applications/cgirish-vm1
