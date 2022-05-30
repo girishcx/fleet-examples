@@ -1,0 +1,7 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEDataMoverVirtualMachine
+metadata:
+  name: data-mover
+spec:
+  cpu: "2"
+  memory: 8GB
