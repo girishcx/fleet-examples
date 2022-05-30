@@ -6,10 +6,10 @@ spec:
   controlPlaneTemplate:
     spec:
       cpu: "2"
-      memory: 4GB
       image:
         marketplace: test-mp
         name: CentOS-Stream8-K8s
+      memory: 4GB
   kubernetes:
     type: default
     version: 1.22.4
@@ -19,3 +19,6 @@ spec:
     spec:
       cpu: "2"
       memory: 4GB
+      image:
+        marketplace: test-mp
+        name: CentOS-Stream8-K8s
