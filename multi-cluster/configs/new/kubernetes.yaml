@@ -7,6 +7,9 @@ spec:
     spec:
       cpu: "2"
       memory: 4GB
+      image:
+        marketplace: test-mp
+        name: CentOS-Stream8-K8s
   kubernetes:
     type: default
     version: 1.22.4
