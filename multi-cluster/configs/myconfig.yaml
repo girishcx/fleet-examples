@@ -1,0 +1,21 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: ClusterGroup
+metadata:
+  name: myconfig
+  namespace: allclusters
+spec: {}
+
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: myconfig
+  namespace: allclusters
+spec:
+  targets:
+    - clusterGroup: myconfig
+      name: myconfig
+  branch: master
+  repo: https://github.com/girishcx/fleet-examples
+  paths:
+    - multi-cluster/configs/myconfig
