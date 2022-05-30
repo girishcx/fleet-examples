@@ -12,11 +12,8 @@ spec:
     cpu: "2"
     memory: 4GB
     image:
-      marketplace: test-mp
       name: CentOS-Stream8-K8s
+      marketplace: test-mp
   workerTemplate:
     cpu: "2"
     memory: 4GB
-    image:
-      name: CentOS-Stream8-K8s
-      marketplace: test-mp
