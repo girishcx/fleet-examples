@@ -12,8 +12,8 @@ metadata:
   name: new
   namespace: allclusters
 spec:
-  targets: []
   branch: master
-  repo: https://github.com/girishcx/fleet-examples
   paths:
     - multi-cluster/configs/new
+  repo: https://github.com/girishcx/fleet-examples
+  targets: []
