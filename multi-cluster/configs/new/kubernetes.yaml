@@ -10,6 +10,11 @@ spec:
         marketplace: test-mp
         name: CentOS-Stream8-K8s
       memory: 4GB
+    cpu: "2"
+    memory: 4GB
+    image:
+      marketplace: test-mp
+      name: CentOS-Stream8-K8s
   kubernetes:
     type: default
     version: 1.22.4
@@ -18,7 +23,12 @@ spec:
   workerTemplate:
     spec:
       cpu: "2"
-      memory: 4GB
       image:
         marketplace: test-mp
         name: CentOS-Stream8-K8s
+      memory: 4GB
+    cpu: "2"
+    memory: 4GB
+    image:
+      marketplace: test-mp
+      name: CentOS-Stream8-K8s
