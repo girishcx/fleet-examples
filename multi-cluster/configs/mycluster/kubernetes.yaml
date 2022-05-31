@@ -1,7 +1,7 @@
 apiVersion: nve.netapp.io/v1
 kind: NVEKubernetesCluster
 metadata:
-  name: kubernetes
+  name: "kubernetes"
 spec:
   controlPlaneTemplate:
     cpu: "4"
@@ -15,10 +15,10 @@ spec:
     memory: 8GB
   kubernetes:
     type: default
-    version: '"1.22.4"'
+    version: "1.22.4"
   networkTemplate:
-    cidr: 10.251.113.223
-    mode: bridge
+    cidr: "10.251.113.223"
+    mode: "bridge"
     size: 2
     type: public
   replicas:
