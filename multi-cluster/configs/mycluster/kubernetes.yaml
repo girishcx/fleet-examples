@@ -21,6 +21,8 @@ spec:
     mode: bridge
     size: 2
     type: public
+    securityGroups:
+      - name: default
   replicas:
     onEvery: 1
   workerTemplate:
