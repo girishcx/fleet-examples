@@ -20,7 +20,7 @@ spec:
     name: Golden-CentOS-Stream8
   memory: 8GB
   network:
-    - name: vnet-02
+    - name: vnet-01
       qos:
         inbound:
           average: 100KB/s
@@ -30,3 +30,13 @@ spec:
           average: 100KB/s
           burst: 150KB/s
           peak: 150KB/s
+    - name: Fleet-cluster1-NIC
+      qos:
+        inbound:
+          average: 100KB/sec
+          peak: 150KB/sec
+          burst: 150KB/sec
+        outbound:
+          average: 100KB/sec
+          peak: 150KB/sec
+          burst: 150KB/sec
