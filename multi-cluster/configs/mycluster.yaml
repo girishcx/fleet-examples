@@ -3,7 +3,12 @@ kind: ClusterGroup
 metadata:
   name: mycluster
   namespace: allclusters
-spec: {}
+spec:
+  selector:
+    matchLabels:
+      env: dev
+      location: rtp
+      role: master
 
 ---
 apiVersion: fleet.cattle.io/v1alpha1
@@ -12,10 +17,10 @@ metadata:
   name: mycluster
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/configs/mycluster
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: mycluster
       name: mycluster
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/configs/mycluster
