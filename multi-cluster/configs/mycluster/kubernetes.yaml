@@ -16,7 +16,7 @@ spec:
       marketplace: test-mp
     customization:
       startScript: '""'
-      startScriptEncoded: "0"
+      startScriptEncoded: false
   workerTemplate:
     cpu: "2"
     memory: 4GB
@@ -25,7 +25,7 @@ spec:
       name: CentOS-Stream8-K8s
     customization:
       startScript: '""'
-      startScriptEncoded: "0"
+      startScriptEncoded: false
   networkTemplate:
     mode: bridge
     type: public
