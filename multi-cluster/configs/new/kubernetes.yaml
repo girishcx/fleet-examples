@@ -1,0 +1,8 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEKubernetesCluster
+metadata:
+  name: kubernetes
+spec:
+  controlPlaneTemplate:
+    customization:
+      startScriptEncoded: tru
