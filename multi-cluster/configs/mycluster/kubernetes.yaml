@@ -5,7 +5,7 @@ metadata:
 spec:
   workerTemplate:
     customization:
-      startScriptEncoded: "false"
+      startScriptEncoded: false
       startScript: '""'
     cpu: "2"
     memory: 4GB
@@ -21,7 +21,7 @@ spec:
       - name: default
   controlPlaneTemplate:
     customization:
-      startScriptEncoded: "false"
+      startScriptEncoded: false
       startScript: '""'
     cpu: "2"
     memory: 4GB
