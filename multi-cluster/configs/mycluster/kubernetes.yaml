@@ -7,7 +7,7 @@ spec:
     cpu: "4"
     customization:
       startScript: '""'
-      startScriptEncoded: "false"
+      startScriptEncoded: 0
     image:
       marketplace: test-mp
       name: CentOS-Stream8-K8s
@@ -28,7 +28,7 @@ spec:
     cpu: "4"
     customization:
       startScript: '""'
-      startScriptEncoded: false
+      startScriptEncoded: 0
     image:
       marketplace: test-mp
       name: CentOS-Stream8-K8s
