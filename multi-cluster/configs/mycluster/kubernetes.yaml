@@ -21,7 +21,7 @@ spec:
     size: 2
     type: public
     securityGroups:
-      - name: default
+    - name: default
   replicas:
     onEvery: 1
   workerTemplate:
