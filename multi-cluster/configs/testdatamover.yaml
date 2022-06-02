@@ -1,0 +1,26 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: ClusterGroup
+metadata:
+  name: testdatamover
+  namespace: allclusters
+spec:
+  selector:
+    matchLabels:
+      env: dev
+      location: rtp
+      role: master
+
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: testdatamover
+  namespace: allclusters
+spec:
+  targets:
+    - clusterGroup: testdatamover
+      name: testdatamover
+  branch: master
+  repo: https://github.com/girishcx/fleet-examples
+  paths:
+    - multi-cluster/configs/testdatamover
