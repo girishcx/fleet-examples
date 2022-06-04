@@ -3,31 +3,31 @@ kind: NVEKubernetesCluster
 metadata:
   name: kubernetes
 spec:
+  controlPlaneTemplate:
+    cpu: "4"
+    customization:
+      startScript: '""'
+      startScriptEncoded: false
+    image:
+      marketplace: test-mp
+      name: CentOS-Stream8-K8s
+    memory: 8GB
   kubernetes:
     type: default
     version: 1.22.4
+  networkTemplate:
+    cidr: 10.251.113.223
+    mode: bridge
+    size: 2
+    type: public
   replicas:
     onEvery: 1
-  controlPlaneTemplate:
-    cpu: "4"
-    memory: 8GB
-    image:
-      marketplace: test-mp
-      name: CentOS-Stream8-K8s
-    customization:
-      startScript: '""'
-      startScriptEncoded: false
   workerTemplate:
     cpu: "4"
-    memory: 8GB
-    image:
-      name: CentOS-Stream8-K8s
-      marketplace: test-mp
     customization:
       startScript: '""'
       startScriptEncoded: false
-  networkTemplate:
-    mode: bridge
-    type: public
-    cidr: 10.251.113.223
-    size: 2
+    image:
+      marketplace: test-mp
+      name: CentOS-Stream8-K8s
+    memory: 8GB

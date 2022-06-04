@@ -4,18 +4,18 @@ metadata:
   name: data-mover
 spec:
   cpu: "4"
+  image:
+    marketplace: test-mp
+    name: CentOS-Stream8-K8s
   memory: 8GB
   network:
     - name: vnet-01
       qos:
         inbound:
           average: 100KB/s
-          peak: 150KB/s
           burst: 150KB/s
+          peak: 150KB/s
         outbound:
           average: 100KB/s
-          peak: 150KB/s
           burst: 150KB/s
-  image:
-    marketplace: test-mp
-    name: CentOS-Stream8-K8s
+          peak: 150KB/s
