@@ -17,10 +17,10 @@ metadata:
   name: datatest
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/configs/datatest
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: datatest
       name: datatest
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/configs/datatest
