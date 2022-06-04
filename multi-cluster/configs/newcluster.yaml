@@ -17,10 +17,10 @@ metadata:
   name: newcluster
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/configs/newcluster
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: newcluster
       name: newcluster
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/configs/newcluster
