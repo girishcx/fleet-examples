@@ -1,0 +1,23 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEVirtualMachine
+metadata:
+  name: new
+spec:
+  template:
+    spec:
+      image:
+        marketplace: test-mp
+        name: Golden-CentOS-Stream8
+      cpu: "4"
+      memory: 8GB
+      network:
+        - name: vnet-01
+          qos:
+            inbound:
+              average: 100KB/s
+              peak: 150KB/s
+              burst: 150KB/s
+            outbound:
+              average: 100KB/s
+              peak: 150KB/s
+              burst: 150KB/s
