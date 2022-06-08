@@ -4,10 +4,10 @@ metadata:
   name: app1
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/applications/app1
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: dev-rtp-master
       name: dev-rtp-master
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/applications/app1

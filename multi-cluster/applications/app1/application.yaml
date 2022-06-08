@@ -5,19 +5,21 @@ metadata:
 spec:
   template:
     spec:
+      cpu: "4"
       image:
         marketplace: test-mp
         name: CentOS-Stream8-K8s
-      cpu: "4"
-      memory: 8GB
+      memory: 4GB
       network:
-        - qos:
+        - name: vnet-01
+          qos:
             inbound:
               average: 100KB/s
-              peak: 150KB/s
               burst: 150KB/s
+              peak: 150KB/s
             outbound:
               average: 100KB/s
-              peak: 150KB/s
               burst: 150KB/s
-          name: vnet-01
+              peak: 150KB/s
+      customization:
+        userInput: []
