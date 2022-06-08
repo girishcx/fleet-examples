@@ -1,0 +1,13 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: newappx2
+  namespace: allclusters
+spec:
+  targets:
+    - clusterGroup: rtp-dev-master
+      name: rtp-dev-master
+  branch: master
+  repo: https://github.com/girishcx/fleet-examples
+  paths:
+    - multi-cluster/applications/newappx2
