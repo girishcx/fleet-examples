@@ -8,7 +8,7 @@ spec:
       cpu: "4"
       image:
         marketplace: test-mp
-        name: Golden-CentOS-Stream8
+        name: CentOS-Stream8-K8s
       memory: 8GB
       network:
         - name: vnet-01
