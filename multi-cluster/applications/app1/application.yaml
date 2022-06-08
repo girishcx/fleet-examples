@@ -1,0 +1,23 @@
+apiVersion: nve.netapp.io/v1
+kind: NVEVirtualMachine
+metadata:
+  name: app1
+spec:
+  template:
+    spec:
+      image:
+        marketplace: test-mp
+        name: CentOS-Stream8-K8s
+      cpu: "4"
+      memory: 8GB
+      network:
+        - qos:
+            inbound:
+              average: 100KB/s
+              peak: 150KB/s
+              burst: 150KB/s
+            outbound:
+              average: 100KB/s
+              peak: 150KB/s
+              burst: 150KB/s
+          name: vnet-01
