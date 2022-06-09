@@ -28,12 +28,12 @@ spec:
               peak: 100KB/s
       outgoingData:
         - operation: copy
+          schedule:
+            frequency: 15min
           source:
-            type: NFS
             path: /data/camera01
+            type: NFS
           target:
             externalStorage:
               kind: NVEExternalStorage
               name: backup-target-1
-          schedule:
-            frequency: 15min
