@@ -4,10 +4,10 @@ metadata:
   name: newappx2
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/applications/newappx2
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: rtp-dev-master
       name: rtp-dev-master
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/applications/newappx2
