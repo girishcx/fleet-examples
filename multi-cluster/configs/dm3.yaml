@@ -1,0 +1,26 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: ClusterGroup
+metadata:
+  name: dm3
+  namespace: allclusters
+spec:
+  selector:
+    matchLabels:
+      env: dev
+      location: rtp
+      role: master
+
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: dm3
+  namespace: allclusters
+spec:
+  targets:
+    - clusterGroup: dm3
+      name: dm3
+  branch: master
+  repo: https://github.com/girishcx/fleet-examples
+  paths:
+    - multi-cluster/configs/dm3
