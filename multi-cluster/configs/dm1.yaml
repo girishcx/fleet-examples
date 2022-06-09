@@ -17,10 +17,10 @@ metadata:
   name: dm1
   namespace: allclusters
 spec:
+  branch: master
+  paths:
+    - multi-cluster/configs/dm1
+  repo: https://github.com/girishcx/fleet-examples
   targets:
     - clusterGroup: dm1
       name: dm1
-  branch: master
-  repo: https://github.com/girishcx/fleet-examples
-  paths:
-    - multi-cluster/configs/dm1
